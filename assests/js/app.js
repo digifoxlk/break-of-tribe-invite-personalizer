@@ -39,8 +39,13 @@ function drawStrike(word) {
 
 // relative position (0-1) of handle center within the image
 let relX = 0.5;
-let relY = 0.688; // default position closer to the invitation title line, adjustable by user
+let relY = 0.69; // default position closer to the invitation title line, adjustable by user
 let fontSizeRel = 0.028; // relative to image width, so it scales properly on export
+const MIN_FONT_PX = 24;
+
+function getFontPx(baseWidth) {
+    return Math.max(MIN_FONT_PX, fontSizeRel * baseWidth * (fontSizeInput.value / 30));
+}
 
 img.onload = () => {
     canvas.width = img.naturalWidth;
@@ -60,11 +65,12 @@ function positionHandle() {
     const rect = stage.getBoundingClientRect();
     const w = rect.width;
     const h = rect.width * (img.naturalHeight / img.naturalWidth);
-    const fontPx = Math.max(10, fontSizeRel * w * (fontSizeInput.value / 30));
-    fontSizeValue.textContent = fontPx.toFixed(0) + " px";
-    handle.style.fontSize = fontPx + "px";
+    const actualFontPx = getFontPx(canvas.width);
+    const displayFontPx = actualFontPx * (w / canvas.width);
+    fontSizeValue.textContent = fontSizeInput.value + " px";
+    handle.style.fontSize = displayFontPx + "px";
     handle.style.color = fontColorInput.value;
-    handle.style.fontWeight = "600";
+    handle.style.fontWeight = "400";
     const text = nameInput.value.trim() || "Guest Name";
     nameLabel.textContent = text;
 
@@ -165,8 +171,8 @@ btnPdf.addEventListener('click', () => {
 function renderFinalCanvas() {
     draw(); // redraw base image at full resolution
     const text = nameInput.value.trim() || "Guest Name";
-    const fontPx = Math.max(10, fontSizeRel * canvas.width * (fontSizeInput.value / 30));
-    ctx.font = "600 " + fontPx + "px -apple-system, 'Segoe UI', Roboto, Arial, sans-serif";
+    const fontPx = getFontPx(canvas.width);
+    ctx.font = "400 " + fontPx + "px 'Poppins', -apple-system, 'Segoe UI', Roboto, Arial, sans-serif";
     ctx.fillStyle = fontColorInput.value;
     ctx.textAlign = "center";
     ctx.textBaseline = "middle";
