@@ -6,7 +6,8 @@ A lightweight web tool for customizing **Break of Tribe · Path to the Roots** i
 
 - **Sinhala title toggle** - Choose between `ඔබතුමන්ට (Mr.)` and `ඔබතුමීයට (Mrs./Ms.)`; the inactive title is automatically crossed out on the invitation.
 - **Drag-and-drop placement** - Move the guest name label anywhere on the invitation artwork using mouse or touch.
-- **Live styling controls** - Change text size, view the rendered size in `px`, and pick text color instantly.
+- **Live styling controls** - Change text size, view the rendered slider size in `px`, and pick text color instantly.
+- **Poppins guest font** - Guest names are rendered in `Poppins` for a polished invitation style.
 - **Export options** - Save the final invitation as a high-resolution **PNG** or **PDF**.
 - **Client-side only** - No installation or server required.
 
@@ -30,6 +31,7 @@ A lightweight web tool for customizing **Break of Tribe · Path to the Roots** i
 ## Notes
 
 - The invitation background is rendered on a canvas using embedded image data.
+- Guest names use the `Poppins` font in both preview and exported files.
 - PDF export is implemented using a local `jsPDF` library.
 - The app is designed for desktop and mobile browsers.
 
