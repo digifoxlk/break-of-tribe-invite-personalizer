@@ -1,4 +1,4 @@
-# Break of Tribe - Invitation Personalizer
+# 👺 Break of Tribe - Invitation Personalizer
 
 A lightweight web tool for customizing **Break of Tribe · Path to the Roots** invitation cards for the KDU Auditorium event on **2026/08/22**. Enter a guest name, choose the Sinhala title, drag the name into place on the invitation preview, and download a personalized **PNG** or **PDF** - all in the browser with no backend.
 
