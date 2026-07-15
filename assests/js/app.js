@@ -14,7 +14,7 @@ const btnPng = document.getElementById('btnPng');
 const btnPdf = document.getElementById('btnPdf');
 
 let img = new Image();
-let exportFormat = 'png';
+let exportFormat = 'pdf';
 let selectedTitle = 'mr'; // 'mr' selected keeps ඔබතුමන්ට, strikes ඔබතුමීයට
 
 // Precisely measured word positions (relative to full image, from source PDF render)
@@ -39,7 +39,7 @@ function drawStrike(word) {
 
 // relative position (0-1) of handle center within the image
 let relX = 0.5;
-let relY = 0.79; // just below the "ඔබතුමන්ට / ඔබතුමීයට" line, adjustable by user
+let relY = 0.688; // default position closer to the invitation title line, adjustable by user
 let fontSizeRel = 0.028; // relative to image width, so it scales properly on export
 
 img.onload = () => {
@@ -61,7 +61,7 @@ function positionHandle() {
     const w = rect.width;
     const h = rect.width * (img.naturalHeight / img.naturalWidth);
     const fontPx = Math.max(10, fontSizeRel * w * (fontSizeInput.value / 30));
-    fontSizeValue.textContent = fontPx.toFixed(0) + "px";
+    fontSizeValue.textContent = fontPx.toFixed(0) + " px";
     handle.style.fontSize = fontPx + "px";
     handle.style.color = fontColorInput.value;
     handle.style.fontWeight = "600";
