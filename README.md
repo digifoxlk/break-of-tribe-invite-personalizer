@@ -1,14 +1,14 @@
 # Break of Tribe - Invitation Personalizer
 
-A lightweight web tool for customizing **Break of Tribe · Path to the Roots** invitation cards for the KDU Auditorium event on **2026/08/22**. Enter a guest name, choose the Sinhala title, drag the name into place on the invitation preview, and download a personalized **PNG** or **PDF** — all in the browser with no backend.
+A lightweight web tool for customizing **Break of Tribe · Path to the Roots** invitation cards for the KDU Auditorium event on **2026/08/22**. Enter a guest name, choose the Sinhala title, drag the name into place on the invitation preview, and download a personalized **PNG** or **PDF** - all in the browser with no backend.
 
 ## Features
 
-- **Sinhala title toggle** — Choose between `ඔබතුමන්ට (Mr.)` and `ඔබතුමීයට (Mrs./Ms.)`; the inactive title is automatically crossed out on the invitation.
-- **Drag-and-drop placement** — Move the guest name label anywhere on the invitation artwork using mouse or touch.
-- **Live styling controls** — Change text size and color instantly.
-- **Export options** — Save the final invitation as a high-resolution **PNG** or **PDF**.
-- **Client-side only** — No installation or server required.
+- **Sinhala title toggle** - Choose between `ඔබතුමන්ට (Mr.)` and `ඔබතුමීයට (Mrs./Ms.)`; the inactive title is automatically crossed out on the invitation.
+- **Drag-and-drop placement** - Move the guest name label anywhere on the invitation artwork using mouse or touch.
+- **Live styling controls** - Change text size and color instantly.
+- **Export options** - Save the final invitation as a high-resolution **PNG** or **PDF**.
+- **Client-side only** - No installation or server required.
 
 ## Usage
 
@@ -21,9 +21,9 @@ A lightweight web tool for customizing **Break of Tribe · Path to the Roots** i
 
 ## Project Structure
 
-- `index.html` — main page and UI structure
-- `assests/css/app.css` — styles and visual design
-- `assests/js/app.js` — canvas rendering, drag interaction, export logic
+- `index.html` - main page and UI structure
+- `assests/css/app.css` - styles and visual design
+- `assests/js/app.js` - canvas rendering, drag interaction, export logic
 
 ## Notes
 
