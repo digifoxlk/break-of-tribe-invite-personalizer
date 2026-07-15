@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>Break of Tribe - Invitation Personalizer</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <link rel="stylesheet" href="./assests/css/app.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <h1>Break of Tribe · Final 2026</h1>
+        <p class="sub">Type the guest name, drag it into place, then download</p>
+
+        <div class="canvas-stage" id="stage">
+            <canvas id="baseCanvas"></canvas>
+            <div class="name-handle" id="nameHandle"><span id="nameLabel">Guest Name</span></div>
+        </div>
+
+        <div class="panel">
+            <label>Title (crosses out the other automatically)</label>
+            <div class="fmt-toggle">
+                <button id="btnMr" class="active">ඔබතුමන්ට (Mr.)</button>
+                <button id="btnMrs">ඔබතුමීයට (Mrs./Ms.)</button>
+            </div>
+
+            <label style="margin-top:14px;" for="nameInput">Guest Name (English)</label>
+            <input type="text" id="nameInput" placeholder="e.g. Mr. Kasun Perera" autocomplete="off">
+
+            <div class="row">
+                <div class="field">
+                    <label for="fontSize">Text Size</label>
+                    <input type="range" id="fontSize" min="14" max="60" value="30">
+                </div>
+                <div class="field">
+                    <label for="fontColor">Text Color</label>
+                    <input type="color" id="fontColor" value="#f3e6c8">
+                </div>
+            </div>
+
+            <p class="hint">Choose the correct title above — the other one gets crossed out automatically. Drag the
+                dashed box to place the guest's name anywhere on the invitation.</p>
+
+            <label style="margin-top:14px;">Export Format</label>
+            <div class="fmt-toggle">
+                <button id="btnPng" class="active">PNG</button>
+                <button id="btnPdf">PDF</button>
+            </div>
+
+            <button class="download-btn" id="downloadBtn">Download Invitation</button>
+        </div>
+
+        <footer>Break of Tribe — Path to the Roots · KDU Auditorium · 2026/08/22</footer>
+    </div>
+
+    <script src="./assests/js/app.js"></script>
+</body>
+
+</html>
