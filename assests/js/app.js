@@ -7,6 +7,7 @@ const handle = document.getElementById('nameHandle');
 const nameLabel = document.getElementById('nameLabel');
 const nameInput = document.getElementById('nameInput');
 const fontSizeInput = document.getElementById('fontSize');
+const fontSizeValue = document.getElementById('fontSizeValue');
 const fontColorInput = document.getElementById('fontColor');
 const downloadBtn = document.getElementById('downloadBtn');
 const btnPng = document.getElementById('btnPng');
@@ -60,6 +61,7 @@ function positionHandle() {
     const w = rect.width;
     const h = rect.width * (img.naturalHeight / img.naturalWidth);
     const fontPx = Math.max(10, fontSizeRel * w * (fontSizeInput.value / 30));
+    fontSizeValue.textContent = fontPx.toFixed(0) + "px";
     handle.style.fontSize = fontPx + "px";
     handle.style.color = fontColorInput.value;
     handle.style.fontWeight = "600";
